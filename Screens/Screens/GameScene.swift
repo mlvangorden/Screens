@@ -15,21 +15,38 @@ var screen_width = CGFloat()
 var screen_height = CGFloat()
 
 let header_offset : CGFloat = 300
-let space_height : CGFloat = 93.75
-let space_width : CGFloat = 93.75
+var space_height = CGFloat()
+var space_width = CGFloat()
 
 class GameScene: SKScene {
     
+    var entities = [GKEntity]()
+    var graphs = [String : GKGraph]()
+    
+    private var lastUpdateTime : TimeInterval = 0
+    
     var board = [Space]()
     
-    override func didMove(to view: SKView) {
+    override func sceneDidLoad() {
+        self.lastUpdateTime = 0
+        
         screenBounds = UIScreen.main.bounds
         
         let temp_height = screenBounds.height
         let temp_width = screenBounds.width
         
-        screen_width = max(temp_height, temp_width)
-        screen_height = min(temp_height, temp_width)
+        screen_width = min(temp_height, temp_width)
+        screen_height = max(temp_height, temp_width)
+        
+        screen_width *= 2
+        screen_height *= 2
+        
+        space_width = screen_width / 8
+        space_height = space_width
+        
+        self.anchorPoint = CGPoint(x: 0, y: 1)
+        
+        createBoard()
     }
     
     func createBoard() {
@@ -39,11 +56,11 @@ class GameScene: SKScene {
             let row = Int(i / 4)
             let odd = row % 2
             
-            let x_offset = CGFloat((column * 2 + odd + (1/2)))
-            let y_offset = CGFloat(2 * row - (1/2))
+            let x_offset = CGFloat(Double(column) * 2 + Double(odd) + (1.0/2.0))
+            let y_offset = CGFloat(Double(row) + (1.0/2.0))
             
             let x_position : CGFloat = space_width * x_offset
-            let y_position : CGFloat = (-1 * header_offset) - space_height * y_offset
+            let y_position : CGFloat = -1 * (header_offset + space_height * y_offset )
             
             space.position = CGPoint(x: x_position, y: y_position)
             
@@ -97,22 +114,38 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval){
-
+        // Called before each frame is rendered
+        
+        // Initialize _lastUpdateTime if it has not already been
+        if (self.lastUpdateTime == 0) {
+            self.lastUpdateTime = currentTime
+        }
+        
+        // Calculate time since last update
+        let dt = currentTime - self.lastUpdateTime
+        
+        // Update entities
+        for entity in self.entities {
+            entity.update(deltaTime: dt)
+        }
+        
+        self.lastUpdateTime = currentTime
     }
 }
 
 class Space : SKSpriteNode {
     
-    var num : Int
-    var NW = Space(number: -1)
-    var NE = Space(number: -1)
-    var SW = Space(number: -1)
-    var SE = Space(number: -1)
+    private var num : Int
+    private var NW = -1
+    private var NE = -1
+    private var SW = -1
+    private var SE = -1
     
     init(number: Int) {
         num = number
         let texture = SKTexture(imageNamed: "space")
         super.init(texture: texture, color: UIColor.clear, size: texture.size())
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5) //change to (0,1)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -122,23 +155,23 @@ class Space : SKSpriteNode {
     func setNeighbor(space: Space, direction: String) {
         switch direction {
         case "NW":
-            NW = space
+            NW = space.getNumber()
             
         case "NE":
-            NE = space
+            NE = space.getNumber()
             
         case "SW":
-            SW = space
+            SW = space.getNumber()
             
         case "SE":
-            SE = space
+            SE = space.getNumber()
             
         default:
             return
         }
     }
     
-    func getNeighbor(direction: String) -> Space {
+    func getNeighbor(direction: String) -> Int {
         switch direction {
         case "NW":
             return NW
@@ -153,7 +186,7 @@ class Space : SKSpriteNode {
             return SE
             
         default:
-            return Space(number: -1)
+            return -1
         }
     }
     
