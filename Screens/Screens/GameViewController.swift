@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  Screens
 //
-//  Created by Matthew Van Gorden on 10/18/19.
+//  Created by Matthew Van Gorden on 10/20/19.
 //  Copyright © 2019 Matthew Van Gorden. All rights reserved.
 //
 
@@ -35,8 +35,8 @@ class GameViewController: UIViewController {
                     
                     view.ignoresSiblingOrder = true
                     
-                    view.showsFPS = true
-                    view.showsNodeCount = true
+                    view.showsFPS = false
+                    view.showsNodeCount = false
                 }
             }
         }
