@@ -25,7 +25,11 @@ var button_directions = [false, false, false, false]
 var board = [Space]()
 var arrows = [Arrow]()
 
+var score = 0
+
 class GameScene: SKScene {
+    
+    var viewController = GameViewController()
     
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
@@ -35,7 +39,6 @@ class GameScene: SKScene {
     var enemy2 = Enemy(space: 0)
     var star = Star(space: 0)
     
-    var score = 0
     var score_display = SKLabelNode()
     
     var waiting_for_move : Bool = false
@@ -69,6 +72,12 @@ class GameScene: SKScene {
     }
     
     func startGame() {
+        player.removeFromParent()
+        enemy1.removeFromParent()
+        enemy2.removeFromParent()
+        score_display.removeFromParent()
+        score = 0
+        
         player = Player(space: 27)
         enemy1 = Enemy(space: 0)
         enemy2 = Enemy(space: 3)
@@ -87,15 +96,6 @@ class GameScene: SKScene {
         
         spawnStar()
         updateButtons()
-    }
-    
-    func restartGame() {
-        player.removeFromParent()
-        enemy1.removeFromParent()
-        enemy2.removeFromParent()
-        score_display.removeFromParent()
-        score = 0
-        startGame()
     }
     
     func createBoard() {
@@ -137,9 +137,9 @@ class GameScene: SKScene {
                 board[i].setNeighbor(space: board[i + 4 + odd], direction: 2)
             }
             
+            board[i].removeFromParent()
             self.addChild(board[i])
         }
-        print(board.count)
     }
     
     func addArrows() {
@@ -176,6 +176,10 @@ class GameScene: SKScene {
     func scoreStar(){
         score += 1
         score_display.text = String(score)
+    }
+    
+    func getScore() -> Int {
+        return score
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -265,7 +269,7 @@ class GameScene: SKScene {
         
         //losing condition
         if(player.position == enemy1.position || player.position == enemy2.position) {
-            restartGame()
+            viewController.endVoyage()
         }
         //scoring condition
         else if (player.position == star.position) {
