@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		591F2BEF23636B1800B4674E /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F2BEE23636B1800B4674E /* GameOverViewController.swift */; };
+		591F2BF423661AF700B4674E /* Pirate Scroll.otf in Resources */ = {isa = PBXBuildFile; fileRef = 591F2BF323661AF600B4674E /* Pirate Scroll.otf */; };
+		591F2BFA23661BDA00B4674E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591F2BF923661BDA00B4674E /* GameScene.swift */; };
 		5986702523609C18000F2816 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986702423609C18000F2816 /* SplashViewController.swift */; };
 		5986702723633682000F2816 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986702623633682000F2816 /* LeaderboardViewController.swift */; };
 		5986702923633C8C000F2816 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5986702823633C8C000F2816 /* CustomCell.swift */; };
 		59AD1512235CF205000BB3B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AD1511235CF205000BB3B8 /* AppDelegate.swift */; };
 		59AD1514235CF205000BB3B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 59AD1513235CF205000BB3B8 /* GameScene.sks */; };
 		59AD1516235CF205000BB3B8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 59AD1515235CF205000BB3B8 /* Actions.sks */; };
-		59AD1518235CF205000BB3B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AD1517235CF205000BB3B8 /* GameScene.swift */; };
 		59AD151A235CF205000BB3B8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AD1519235CF205000BB3B8 /* GameViewController.swift */; };
 		59AD151D235CF205000BB3B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AD151B235CF205000BB3B8 /* Main.storyboard */; };
 		59AD151F235CF209000BB3B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AD151E235CF209000BB3B8 /* Assets.xcassets */; };
@@ -42,14 +43,15 @@
 
 /* Begin PBXFileReference section */
 		591F2BEE23636B1800B4674E /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		591F2BF323661AF600B4674E /* Pirate Scroll.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pirate Scroll.otf"; sourceTree = "<group>"; };
+		591F2BF923661BDA00B4674E /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		5986702423609C18000F2816 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5986702623633682000F2816 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		5986702823633C8C000F2816 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		59AD150E235CF205000BB3B8 /* Screens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Screens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59AD150E235CF205000BB3B8 /* Maiden Voyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Maiden Voyage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AD1511235CF205000BB3B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59AD1513235CF205000BB3B8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		59AD1515235CF205000BB3B8 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		59AD1517235CF205000BB3B8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		59AD1519235CF205000BB3B8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		59AD151C235CF205000BB3B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59AD151E235CF209000BB3B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		591F2BF223661AE800B4674E /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				591F2BF323661AF600B4674E /* Pirate Scroll.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		59AD1505235CF205000BB3B8 = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +111,7 @@
 		59AD150F235CF205000BB3B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59AD150E235CF205000BB3B8 /* Screens.app */,
+				59AD150E235CF205000BB3B8 /* Maiden Voyage.app */,
 				59AD1528235CF209000BB3B8 /* ScreensTests.xctest */,
 				59AD1533235CF209000BB3B8 /* ScreensUITests.xctest */,
 			);
@@ -115,13 +125,14 @@
 				5986702423609C18000F2816 /* SplashViewController.swift */,
 				59AD1513235CF205000BB3B8 /* GameScene.sks */,
 				59AD1515235CF205000BB3B8 /* Actions.sks */,
-				59AD1517235CF205000BB3B8 /* GameScene.swift */,
+				591F2BF923661BDA00B4674E /* GameScene.swift */,
 				59AD1519235CF205000BB3B8 /* GameViewController.swift */,
 				591F2BEE23636B1800B4674E /* GameOverViewController.swift */,
 				5986702823633C8C000F2816 /* CustomCell.swift */,
 				5986702623633682000F2816 /* LeaderboardViewController.swift */,
 				59AD151B235CF205000BB3B8 /* Main.storyboard */,
 				59AD151E235CF209000BB3B8 /* Assets.xcassets */,
+				591F2BF223661AE800B4674E /* fonts */,
 				59AD1520235CF209000BB3B8 /* LaunchScreen.storyboard */,
 				59AD1523235CF209000BB3B8 /* Info.plist */,
 			);
@@ -163,7 +174,7 @@
 			);
 			name = Screens;
 			productName = Screens;
-			productReference = 59AD150E235CF205000BB3B8 /* Screens.app */;
+			productReference = 59AD150E235CF205000BB3B8 /* Maiden Voyage.app */;
 			productType = "com.apple.product-type.application";
 		};
 		59AD1527235CF209000BB3B8 /* ScreensTests */ = {
@@ -252,6 +263,7 @@
 			files = (
 				59AD151D235CF205000BB3B8 /* Main.storyboard in Resources */,
 				59AD1514235CF205000BB3B8 /* GameScene.sks in Resources */,
+				591F2BF423661AF700B4674E /* Pirate Scroll.otf in Resources */,
 				59AD151F235CF209000BB3B8 /* Assets.xcassets in Resources */,
 				59AD1522235CF209000BB3B8 /* LaunchScreen.storyboard in Resources */,
 				59AD1516235CF205000BB3B8 /* Actions.sks in Resources */,
@@ -279,12 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59AD1518235CF205000BB3B8 /* GameScene.swift in Sources */,
 				59AD151A235CF205000BB3B8 /* GameViewController.swift in Sources */,
 				59AD1512235CF205000BB3B8 /* AppDelegate.swift in Sources */,
 				591F2BEF23636B1800B4674E /* GameOverViewController.swift in Sources */,
 				5986702723633682000F2816 /* LeaderboardViewController.swift in Sources */,
 				5986702923633C8C000F2816 /* CustomCell.swift in Sources */,
+				591F2BFA23661BDA00B4674E /* GameScene.swift in Sources */,
 				5986702523609C18000F2816 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mlvangorden.Screens;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Maiden Voyage";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,7 +496,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mlvangorden.Screens;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Maiden Voyage";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

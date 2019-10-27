@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Screens.xcodeproj">
+      location = "self:/Users/mlvangorden/Desktop/CS441/Screens/Screens/Screens.xcodeproj">
    </FileRef>
 </Workspace>

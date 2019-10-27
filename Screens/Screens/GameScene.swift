@@ -18,7 +18,7 @@ let header_offset : CGFloat = 187.5
 var space_height = CGFloat()
 var space_width = CGFloat()
 
-let button_offset : CGFloat = 20.0
+let button_offset : CGFloat = 30.0
 let arrow_dimensions : CGFloat = 168.25
 
 var button_directions = [false, false, false, false]
@@ -38,6 +38,8 @@ class GameScene: SKScene {
     var enemy1 = Enemy(space: 0)
     var enemy2 = Enemy(space: 0)
     var star = Star(space: 0)
+    
+    var map = SKSpriteNode()
     
     var score_display = SKLabelNode()
     
@@ -66,6 +68,13 @@ class GameScene: SKScene {
         
         self.anchorPoint = CGPoint(x: 0, y: 1)
         
+        let texture = SKTexture(imageNamed: "map")
+        map = .init(texture: texture, color: UIColor.clear, size: texture.size())
+        map.anchorPoint = CGPoint(x: 0, y: 1)
+        map.position = CGPoint(x: 0, y: 0)
+        map.zPosition = -1
+        self.addChild(map)
+        
         createBoard()
         addArrows()
         startGame()
@@ -85,11 +94,11 @@ class GameScene: SKScene {
         self.addChild(enemy1)
         self.addChild(enemy2)
         
-        score_display.fontName = "Times"
+        score_display.fontName = "PIRATESCROLL"
         score_display.horizontalAlignmentMode = .center
         score_display.position = CGPoint(x: screen_width / 2, y: -125)
         score_display.zPosition = 1
-        score_display.fontColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        score_display.fontColor = UIColor(red: 34/255, green: 23/255, blue: 7/255, alpha: 1.0)
         score_display.fontSize = 80
         score_display.text = String(score)
         self.addChild(score_display)
@@ -383,14 +392,14 @@ class Arrow : SKSpriteNode {
         self.name = image_name
         self.zPosition = 1
         
-        var x_position : CGFloat = (screen_width / 2) - (button_offset / 2) - arrow_dimensions
+        var x_position : CGFloat = (screen_width / 2) - arrow_dimensions
         var y_position : CGFloat = -1 * (screen_height - button_offset - arrow_dimensions)
         
         if(dir % 3 == 0) {
-            y_position += (button_offset + arrow_dimensions)
+            y_position += (arrow_dimensions)
         }
         if(dir > 1) {
-            x_position += (button_offset + arrow_dimensions)
+            x_position += (arrow_dimensions)
         }
         self.position = CGPoint(x: x_position, y: y_position)
     }
@@ -443,9 +452,12 @@ class Character : SKSpriteNode {
     var pos : Int
     var neighbors = [-1, -1, -1, -1]
     
+    var image_name = "player"
+    var image_name2 = "player2"
+    
     init(space: Int) {
         pos = space
-        let texture = SKTexture(imageNamed: "player")
+        let texture = SKTexture(imageNamed: image_name)
         super.init(texture: texture, color: UIColor.clear, size: texture.size())
         self.anchorPoint = CGPoint(x: 0, y: 1)
         if(board.count > 0){
@@ -461,6 +473,11 @@ class Character : SKSpriteNode {
     
     func move_direction(direction: Int) {
         if(board.count > 0){
+            if(direction <= 1) {
+                self.texture = SKTexture(imageNamed: image_name2)
+            } else {
+                self.texture = SKTexture(imageNamed: image_name)
+            }
             let temp = getNeighbor(direction: direction)
             if(temp != -1) {
                 pos = temp
@@ -512,7 +529,9 @@ class Player : Character {
 class Enemy : Character {
     override init(space: Int) {
         super.init(space: space)
-        let texture = SKTexture(imageNamed: "enemy")
+        image_name = "enemy"
+        image_name2 = "enemy"
+        let texture = SKTexture(imageNamed: image_name)
         self.texture = texture
         self.name = "Enemy"
     }
