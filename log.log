@@ -1,0 +1,245 @@
+commit b879bae17f9bd7f3abbe33e3a1e38a08ebf9bce4
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Sun Oct 27 16:35:27 2019 -0400
+
+    Completed
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ Screens Image Templates/Arrow.afdesign             | Bin 424373 -> 669448 bytes
+ Screens Image Templates/End Voyage.afdesign        | Bin 0 -> 501309 bytes
+ Screens Image Templates/Enemy.afdesign             | Bin 416453 -> 641171 bytes
+ Screens Image Templates/Leaderboard.afdesign       | Bin 403260 -> 412135 bytes
+ Screens Image Templates/Logo.afdesign              | Bin 407642 -> 498973 bytes
+ Screens Image Templates/Play.afdesign              | Bin 408602 -> 476703 bytes
+ Screens Image Templates/Player.afdesign            | Bin 416058 -> 570945 bytes
+ Screens Image Templates/Space.afdesign             | Bin 393605 -> 2310429 bytes
+ Screens Image Templates/Star.afdesign              | Bin 427911 -> 2343368 bytes
+ Screens Image Templates/app_icon.afdesign          | Bin 0 -> 7860294 bytes
+ Screens/.DS_Store                                  | Bin 0 -> 6148 bytes
+ Screens/Screens.xcodeproj/project.pbxproj          |  30 ++++--
+ .../project.xcworkspace/contents.xcworkspacedata   |   2 +-
+ .../UserInterfaceState.xcuserstate                 | Bin 37089 -> 39848 bytes
+ .../AppIcon.appiconset/Contents.json               |  58 ++++++++----
+ .../AppIcon.appiconset/Icon-App-20x20@1x.png       | Bin 0 -> 1460 bytes
+ .../AppIcon.appiconset/Icon-App-20x20@2x.png       | Bin 0 -> 4391 bytes
+ .../AppIcon.appiconset/Icon-App-20x20@3x.png       | Bin 0 -> 8790 bytes
+ .../AppIcon.appiconset/Icon-App-29x29@1x.png       | Bin 0 -> 2568 bytes
+ .../AppIcon.appiconset/Icon-App-29x29@2x.png       | Bin 0 -> 8312 bytes
+ .../AppIcon.appiconset/Icon-App-29x29@3x.png       | Bin 0 -> 17120 bytes
+ .../AppIcon.appiconset/Icon-App-40x40@1x.png       | Bin 0 -> 4391 bytes
+ .../AppIcon.appiconset/Icon-App-40x40@2x.png       | Bin 0 -> 14726 bytes
+ .../AppIcon.appiconset/Icon-App-40x40@3x.png       | Bin 0 -> 30628 bytes
+ .../AppIcon.appiconset/Icon-App-60x60@2x.png       | Bin 0 -> 30628 bytes
+ .../AppIcon.appiconset/Icon-App-60x60@3x.png       | Bin 0 -> 62214 bytes
+ .../AppIcon.appiconset/Icon-App-76x76@1x.png       | Bin 0 -> 13410 bytes
+ .../AppIcon.appiconset/Icon-App-76x76@2x.png       | Bin 0 -> 46669 bytes
+ .../AppIcon.appiconset/Icon-App-83.5x83.5@2x.png   | Bin 0 -> 54913 bytes
+ .../AppIcon.appiconset/ItunesArtwork@2x.png        | Bin 0 -> 976038 bytes
+ .../Assets.xcassets/arrow_ne.imageset/arrow_ne.png | Bin 10484 -> 23978 bytes
+ .../arrow_ne2.imageset/arrow_ne2.png               | Bin 10666 -> 22580 bytes
+ .../Assets.xcassets/arrow_nw.imageset/arrow_nw.png | Bin 10788 -> 23933 bytes
+ .../arrow_nw2.imageset/arrow_nw2.png               | Bin 11161 -> 19554 bytes
+ .../Assets.xcassets/arrow_se.imageset/arrow_se.png | Bin 11061 -> 23452 bytes
+ .../arrow_se2.imageset/arrow_se2.png               | Bin 11682 -> 19554 bytes
+ .../Assets.xcassets/arrow_sw.imageset/arrow_sw.png | Bin 10579 -> 24300 bytes
+ .../arrow_sw2.imageset/arrow_sw2.png               | Bin 10655 -> 22874 bytes
+ .../end_voyage.imageset/Contents.json              |  21 +++++
+ .../end_voyage.imageset/end_voyage.png             | Bin 0 -> 6393 bytes
+ .../Assets.xcassets/enemy.imageset/enemy.png       | Bin 5279 -> 6118 bytes
+ .../leaderboard.imageset/leaderboard.png           | Bin 25849 -> 21351 bytes
+ .../Screens/Assets.xcassets/logo.imageset/logo.png | Bin 53444 -> 97779 bytes
+ .../Assets.xcassets/map.imageset/Contents.json     |  21 +++++
+ .../Screens/Assets.xcassets/map.imageset/map.png   | Bin 0 -> 3949847 bytes
+ .../Screens/Assets.xcassets/play.imageset/play.png | Bin 14375 -> 70343 bytes
+ .../Assets.xcassets/player.imageset/player.png     | Bin 5234 -> 7965 bytes
+ .../Assets.xcassets/player2.imageset/Contents.json |  21 +++++
+ .../Assets.xcassets/player2.imageset/player2.png   | Bin 0 -> 7820 bytes
+ .../Assets.xcassets/space.imageset/space.png       | Bin 2099 -> 2151 bytes
+ .../Screens/Assets.xcassets/star.imageset/star.png | Bin 6935 -> 7156 bytes
+ Screens/Screens/Base.lproj/Main.storyboard         | 103 +++++++++++++--------
+ Screens/Screens/GameScene.swift                    |  35 +++++--
+ Screens/Screens/GameViewController.swift           |  14 +++
+ Screens/Screens/Info.plist                         |   4 +
+ Screens/Screens/fonts/Pirate Scroll.otf            | Bin 0 -> 99548 bytes
+ 57 files changed, 237 insertions(+), 72 deletions(-)
+
+commit f41c0157c4fe54d0ec8325ccee35985a41d96fd6
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Fri Oct 25 21:53:28 2019 -0400
+
+    10/25/19 9:53pm Everything works as it should, need to make aesthetic changes
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ Screens Image Templates/.DS_Store                  | Bin 6148 -> 6148 bytes
+ Screens/Screens.xcodeproj/project.pbxproj          |  22 +--
+ .../UserInterfaceState.xcuserstate                 | Bin 29376 -> 37089 bytes
+ Screens/Screens/Base.lproj/Main.storyboard         | 150 +++++++++++++++++++--
+ Screens/Screens/CustomCell.swift                   |  58 ++++++++
+ Screens/Screens/GameOverViewController.swift       |  79 +++++++++++
+ Screens/Screens/GameScene.sks                      | Bin 4056 -> 4056 bytes
+ Screens/Screens/GameScene.swift                    |  28 ++--
+ Screens/Screens/GameViewController.swift           |  20 ++-
+ Screens/Screens/LeaderboardArray.swift             |  13 ++
+ Screens/Screens/LeaderboardViewController.swift    |  62 +++++++++
+ Screens/Screens/SplashViewController.swift         |   7 +
+ Screens/Screens/StartScene.sks                     | Bin 3493 -> 0 bytes
+ Screens/Screens/StartScene.swift                   | 113 ----------------
+ 15 files changed, 408 insertions(+), 144 deletions(-)
+
+commit 48bd6b0321227cb8dd7930d5b8db6782b791e369
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Wed Oct 23 21:36:29 2019 -0400
+
+    10/23/19 9:36pm Started with title screen/play button
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ Screens Image Templates/Leaderboard.afdesign       | Bin 0 -> 403260 bytes
+ Screens Image Templates/Logo.afdesign              | Bin 0 -> 407642 bytes
+ Screens Image Templates/Play.afdesign              | Bin 0 -> 408602 bytes
+ Screens/Screens.xcodeproj/project.pbxproj          |  12 +
+ .../UserInterfaceState.xcuserstate                 | Bin 27276 -> 29376 bytes
+ .../leaderboard.imageset/Contents.json             |  21 ++
+ .../leaderboard.imageset/leaderboard.png           | Bin 0 -> 25849 bytes
+ .../Assets.xcassets/logo.imageset/Contents.json    |  21 ++
+ .../Screens/Assets.xcassets/logo.imageset/logo.png | Bin 0 -> 53444 bytes
+ .../Assets.xcassets/play.imageset/Contents.json    |  21 ++
+ .../Screens/Assets.xcassets/play.imageset/play.png | Bin 0 -> 14375 bytes
+ Screens/Screens/Base.lproj/Main.storyboard         |  43 +++-
+ Screens/Screens/GameScene.swift                    | 263 +++++++++++++++++----
+ Screens/Screens/SplashViewController.swift         |  30 +++
+ Screens/Screens/StartScene.sks                     | Bin 0 -> 3493 bytes
+ Screens/Screens/StartScene.swift                   | 113 +++++++++
+ 17 files changed, 470 insertions(+), 54 deletions(-)
+
+commit 8b89c1eb39f51379db04332df9cf374955cdf743
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Sun Oct 20 22:14:21 2019 -0400
+
+    10/20/19 10:14pm Player can move all over board
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ Screens Image Templates/.DS_Store                  | Bin 6148 -> 6148 bytes
+ Screens Image Templates/Arrow.afdesign             | Bin 0 -> 424373 bytes
+ Screens Image Templates/Cannon.afdesign            | Bin 421589 -> 0 bytes
+ Screens Image Templates/Enemy.afdesign             | Bin 0 -> 416453 bytes
+ Screens Image Templates/Player.afdesign            | Bin 0 -> 416058 bytes
+ Screens Image Templates/Space.afdesign             | Bin 393767 -> 393605 bytes
+ Screens Image Templates/Star.afdesign              | Bin 0 -> 427911 bytes
+ Screens/.DS_Store                                  | Bin 6148 -> 0 bytes
+ Screens/Screens.xcodeproj/project.pbxproj          | 278 ++++++++++-----------
+ .../UserInterfaceState.xcuserstate                 | Bin 24361 -> 27276 bytes
+ Screens/Screens/.DS_Store                          | Bin 6148 -> 0 bytes
+ Screens/Screens/AppDelegate.swift                  |   2 +-
+ .../arrow_ne.imageset/Contents.json                |  21 ++
+ .../Assets.xcassets/arrow_ne.imageset/arrow_ne.png | Bin 0 -> 10484 bytes
+ .../arrow_ne2.imageset/Contents.json               |  21 ++
+ .../arrow_ne2.imageset/arrow_ne2.png               | Bin 0 -> 10666 bytes
+ .../arrow_nw.imageset/Contents.json                |  21 ++
+ .../Assets.xcassets/arrow_nw.imageset/arrow_nw.png | Bin 0 -> 10788 bytes
+ .../arrow_nw2.imageset/Contents.json               |  21 ++
+ .../arrow_nw2.imageset/arrow_nw2.png               | Bin 0 -> 11161 bytes
+ .../arrow_se.imageset/Contents.json                |  21 ++
+ .../Assets.xcassets/arrow_se.imageset/arrow_se.png | Bin 0 -> 11061 bytes
+ .../arrow_se2.imageset/Contents.json               |  21 ++
+ .../arrow_se2.imageset/arrow_se2.png               | Bin 0 -> 11682 bytes
+ .../arrow_sw.imageset/Contents.json                |  21 ++
+ .../Assets.xcassets/arrow_sw.imageset/arrow_sw.png | Bin 0 -> 10579 bytes
+ .../arrow_sw2.imageset/Contents.json               |  21 ++
+ .../arrow_sw2.imageset/arrow_sw2.png               | Bin 0 -> 10655 bytes
+ .../Assets.xcassets/enemy.imageset/Contents.json   |  21 ++
+ .../Assets.xcassets/enemy.imageset/enemy.png       | Bin 0 -> 5279 bytes
+ .../Assets.xcassets/player.imageset/Contents.json  |  21 ++
+ .../Assets.xcassets/player.imageset/player.png     | Bin 0 -> 5234 bytes
+ .../Assets.xcassets/space.imageset/space.png       | Bin 2174 -> 2099 bytes
+ .../Assets.xcassets/star.imageset/Contents.json    |  21 ++
+ .../Screens/Assets.xcassets/star.imageset/star.png | Bin 0 -> 6935 bytes
+ Screens/Screens/GameScene.swift                    | 225 ++++++++++++++---
+ Screens/Screens/GameViewController.swift           |   6 +-
+ Screens/ScreensTests/ScreensTests.swift            |   2 +-
+ Screens/ScreensUITests/ScreensUITests.swift        |   2 +-
+ 40 files changed, 573 insertions(+), 173 deletions(-)
+
+commit 6e9dd78e7d12580cdb7c40fb74d276fef5cc9a08
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Fri Oct 18 12:51:30 2019 -0400
+
+    10/18/19 12:51pm Now really creates graph
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ Screens/.DS_Store                                  | Bin 0 -> 6148 bytes
+ Screens/Screens.xcodeproj/project.pbxproj          | 296 ++++++++++-----------
+ .../UserInterfaceState.xcuserstate                 | Bin 23409 -> 24361 bytes
+ Screens/Screens/.DS_Store                          | Bin 0 -> 6148 bytes
+ Screens/Screens/AppDelegate.swift                  |   2 +-
+ Screens/Screens/GameScene.sks                      | Bin 4051 -> 4056 bytes
+ Screens/Screens/GameScene.swift                    |  73 +++--
+ Screens/Screens/GameViewController.swift           |   2 +-
+ Screens/ScreensTests/ScreensTests.swift            |   2 +-
+ Screens/ScreensUITests/ScreensUITests.swift        |   2 +-
+ 11 files changed, 205 insertions(+), 172 deletions(-)
+
+commit f8730882838815da02c18bf9d44f73224a5f55d1
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Fri Oct 18 10:46:42 2019 -0400
+
+    10/18/19 10:46am Created board with space nodes
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ Screens Image Templates/Space.afdesign             | Bin 0 -> 393767 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 20739 -> 23409 bytes
+ .../Assets.xcassets/space.imageset/Contents.json   |  21 ++++
+ .../Assets.xcassets/space.imageset/space.png       | Bin 0 -> 2174 bytes
+ Screens/Screens/GameScene.sks                      | Bin 6926 -> 4051 bytes
+ Screens/Screens/GameScene.swift                    | 118 ++++++++++++++++-----
+ 7 files changed, 114 insertions(+), 25 deletions(-)
+
+commit 3d209c2f6057bea03ee5a5bc85c892a4bd7c6475
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Wed Oct 16 10:41:09 2019 -0400
+
+    10/16/19 10:40am Setup basic outline for game, made pig class
+
+ .DS_Store                                          | Bin 0 -> 6148 bytes
+ Screens Image Templates/.DS_Store                  | Bin 0 -> 6148 bytes
+ Screens Image Templates/Cannon.afdesign            | Bin 0 -> 421589 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 9502 -> 20739 bytes
+ Screens/Screens/GameScene.sks                      | Bin 4931 -> 6926 bytes
+ Screens/Screens/GameScene.swift                    | 129 +++++++++------------
+ Screens/Screens/GameViewController.swift           |   4 +-
+ 7 files changed, 59 insertions(+), 74 deletions(-)
+
+commit bf53c716a32ec5a1a57cb2dd0d4d40417c4e6769
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Mon Oct 14 09:55:25 2019 -0400
+
+    Initial Commit
+
+ Screens/Screens.xcodeproj/project.pbxproj          | 603 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 9502 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ Screens/Screens/Actions.sks                        | Bin 0 -> 1892 bytes
+ Screens/Screens/AppDelegate.swift                  |  41 ++
+ .../AppIcon.appiconset/Contents.json               |  98 ++++
+ Screens/Screens/Assets.xcassets/Contents.json      |   6 +
+ Screens/Screens/Base.lproj/LaunchScreen.storyboard |  25 +
+ Screens/Screens/Base.lproj/Main.storyboard         |  24 +
+ Screens/Screens/GameScene.sks                      | Bin 0 -> 4931 bytes
+ Screens/Screens/GameScene.swift                    | 110 ++++
+ Screens/Screens/GameViewController.swift           |  60 ++
+ Screens/Screens/Info.plist                         |  47 ++
+ Screens/ScreensTests/Info.plist                    |  22 +
+ Screens/ScreensTests/ScreensTests.swift            |  34 ++
+ Screens/ScreensUITests/Info.plist                  |  22 +
+ Screens/ScreensUITests/ScreensUITests.swift        |  43 ++
+ 19 files changed, 1164 insertions(+)
+
+commit 11a00a714cf9be8077bb950167e4ed9989ef2c55
+Author: mlvangorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Mon Oct 14 09:50:56 2019 -0400
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
