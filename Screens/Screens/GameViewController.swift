@@ -52,7 +52,27 @@ class GameViewController: UIViewController {
         }
     }
     
+    
+    /*
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let scene = GameScene(fileNamed: "GameScene") {
+                   
+                   scene.viewController = self
+                   
+                   scene.scaleMode = .aspectFill
+                   
+                   if let view = self.view as! SKView? {
+                       view.presentScene(scene)
+                   }
+                   
+               }
+        
+    }
+ */
+    
     func endVoyage() {
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyboard.instantiateViewController(identifier: "Game Over View Controller") as! GameOverViewController
         self.present(nextViewController, animated: true, completion: nil)

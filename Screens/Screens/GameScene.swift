@@ -269,6 +269,12 @@ class GameScene: SKScene {
         }
     }
     
+    func clearBoard() {
+        for n in self.children {
+            n.removeFromParent()
+        }
+    }
+    
     override func update(_ currentTime: TimeInterval){
         // Called before each frame is rendered
         
@@ -278,6 +284,7 @@ class GameScene: SKScene {
         
         //losing condition
         if(player.position == enemy1.position || player.position == enemy2.position) {
+            clearBoard()
             viewController.endVoyage()
         }
         //scoring condition
@@ -409,6 +416,7 @@ class Arrow : SKSpriteNode {
     }
     
     func deactivate() {
+        /*
         var image_name : String
         switch dir {
         case 0:
@@ -424,6 +432,7 @@ class Arrow : SKSpriteNode {
         }
         self.texture = SKTexture(imageNamed: image_name)
         self.name = image_name
+         */
         active = false
     }
     
