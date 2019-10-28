@@ -15,7 +15,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="Game View Controller" modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="Screens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game View Controller" modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="Maiden_Voyage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
         <!--Splash View Controller-->
         <scene sceneID="1Ib-3q-UmW">
             <objects>
-                <viewController storyboardIdentifier="Splash View Controller" title="Splash View Controller" modalPresentationStyle="fullScreen" id="63f-52-nHt" customClass="SplashViewController" customModule="Screens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Splash View Controller" title="Splash View Controller" modalPresentationStyle="fullScreen" id="63f-52-nHt" customClass="SplashViewController" customModule="Maiden_Voyage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O7I-y0-vyr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,7 @@
         <!--Leaderboard View Controller-->
         <scene sceneID="R9k-kE-wW1">
             <objects>
-                <tableViewController id="GFx-gF-EJA" customClass="LeaderboardViewController" customModule="Screens" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GFx-gF-EJA" customClass="LeaderboardViewController" customModule="Maiden_Voyage" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sHC-9y-dG3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
         <!--Game Over View Controller-->
         <scene sceneID="j2u-vT-Y9U">
             <objects>
-                <viewController storyboardIdentifier="Game Over View Controller" modalPresentationStyle="fullScreen" id="HnY-6g-haK" customClass="GameOverViewController" customModule="Screens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Game Over View Controller" modalPresentationStyle="fullScreen" id="HnY-6g-haK" customClass="GameOverViewController" customModule="Maiden_Voyage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KaH-XI-DwS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +128,7 @@
                                 <color key="textColor" red="0.1727089584" green="0.1119538471" blue="0.041367679829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxD-qk-Elq">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxD-qk-Elq">
                                 <rect key="frame" x="64" y="281" width="246" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.1727089584" green="0.1119538471" blue="0.041367679829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -213,6 +213,6 @@
         <image name="play" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b0b-zI-cxo"/>
+        <segue reference="Zgi-si-gqr"/>
     </inferredMetricsTieBreakers>
 </document>

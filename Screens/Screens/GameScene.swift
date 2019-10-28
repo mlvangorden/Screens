@@ -78,6 +78,7 @@ class GameScene: SKScene {
         createBoard()
         addArrows()
         startGame()
+        spawnStar()
     }
     
     func startGame() {
@@ -103,7 +104,6 @@ class GameScene: SKScene {
         score_display.text = String(score)
         self.addChild(score_display)
         
-        spawnStar()
         updateButtons()
     }
     
